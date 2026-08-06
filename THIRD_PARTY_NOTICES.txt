@@ -1,0 +1,13 @@
+THIRD-PARTY NOTICES
+
+Portions of this repository are derived from the following open-source project:
+
+Project: Wang-ML-Lab/bayesian-peft
+Source: https://github.com/Wang-ML-Lab/bayesian-peft
+Relevant upstream directory: https://github.com/Wang-ML-Lab/bayesian-peft/tree/main/run
+License: MIT License
+License text: https://github.com/Wang-ML-Lab/bayesian-peft/blob/main/LICENSE
+Upstream copyright: Copyright (c) 2025 ML@Rutgers
+
+Those portions remain subject to the upstream MIT License. All other project
+licensing information is provided in the repository's LICENSE file.

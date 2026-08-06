@@ -1,0 +1,37 @@
+# Runtime dependencies for Python 3.10-3.12.
+# Install the PyTorch build matching the local CUDA runtime before this file.
+
+# Core ML frameworks
+torch==2.5.1
+transformers>=4.51.0,<5.0.0  # Qwen3 support
+accelerate==0.27.2
+peft==0.10.0
+
+# Data processing
+datasets==2.17.1
+numpy==1.26.4
+pandas==2.1.4
+scikit-learn==1.3.2
+scipy==1.11.4
+tqdm==4.66.1
+
+# Model and serialization
+bitsandbytes==0.43.1
+safetensors==0.4.2
+sentencepiece==0.1.99
+protobuf==4.25.3
+huggingface-hub>=0.30.0,<1.0.0
+pyyaml==6.0.1
+
+# Graph neural network dependency required by iLoRA. See the README for optional
+# extension-wheel installation matched to the local PyTorch/CUDA build.
+torch-geometric>=2.7.0
+
+# Training utilities
+torchmetrics>=1.8.0
+
+# Shared training utilities and optional experiment logging
+ipdb>=0.13.0
+setproctitle>=1.3.3
+six>=1.16.0
+wandb>=0.16.0

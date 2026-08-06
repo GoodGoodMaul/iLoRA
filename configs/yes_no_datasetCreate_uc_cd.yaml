@@ -1,0 +1,28 @@
+# Hugging Face model ID or an absolute path to an authorized local copy.
+model_name: "Qwen3/Qwen3-8B"
+tokenizer_name: null
+trust_remote_code: true
+
+# Populate this ignored directory from the public cohorts documented in README.md.
+input_data_path: "dataset/raw_data_uc_cd"
+output_data_path: "dataset/processed_data"
+
+dataset:
+  name: "IBD_UC_CD_yes_no"
+  train_ratio: 0.7
+  val_ratio: 0.15
+  seed: 42
+  # Generate this local file with the MaAsLin2 procedure described in README.md.
+  # It is intentionally not distributed with the repository.
+  significant_results_path: "dataset/raw_data_uc_cd/significant_results.tsv"
+  top_feature_count: 20
+
+class_tokens:
+  UC: "yes"
+  CD: "no"
+
+prompt:
+  instruction: >
+    You are a gastroenterologist focused on distinguishing Ulcerative Colitis (UC) from Crohn's Disease (CD).
+    Based on the microbiome profile, answer exactly one token: 'yes' for UC or 'no' for CD.
+  answer_prefix: "Answer:"

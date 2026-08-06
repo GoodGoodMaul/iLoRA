@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+.conda/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local datasets and derived data
+dataset/
+data/
+Molweni-main/
+Molweni_LLM_dataset/
+**/raw_data*/
+**/processed_data*/
+**/significant_results.tsv
+
+# Models, checkpoints, and experiment outputs
+models/
+checkpoints/
+outputs/
+wandb/
+runs/
+logs/
+*.log
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Packaging and build artifacts
+build/
+dist/
+*.egg-info/

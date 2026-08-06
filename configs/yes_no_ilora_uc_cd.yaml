@@ -1,0 +1,46 @@
+# Hugging Face model ID or an absolute path to an authorized local copy.
+model_name: "Qwen3/Qwen3-8B"
+tokenizer_name: null
+trust_remote_code: true
+
+# Local path produced by yes_no_datasetCreate_uc_cd.py; ignored by Git.
+save_dataset_path: "dataset/processed_data/IBD_UC_CD_yes_no"
+
+class_tokens:
+  UC: "yes"
+  CD: "no"
+
+training:
+  dataset_name: "IBD_UC_CD_yes_no"
+  seed: 0
+  batch_size: 2
+  max_seq_length: 9000
+  feature_max_length: 64
+  num_train_epochs: 6
+  learning_rate: 0.0002
+  weight_decay: 0.0
+  warmup_ratio: 0.0
+  warmup_steps: 100
+  eval_steps: 50
+  max_train_steps: 0
+  early_stop_steps: 0
+  thinking_mode: false
+  ilora_loss_weight_laplace: 1e-3
+  ilora_loss_weight_binomial: 1e-3
+  use_ilora: true
+  bf16: true
+  checkpoint_path: "outputs/yes_no_ilora_uc_cd/checkpoints"
+
+lora:
+  r: 16
+  lora_alpha: 32
+  lora_dropout: 0.05
+  bias: "none"
+  target_modules:
+    - q_proj
+    - v_proj
+    - k_proj
+    - o_proj
+  modules_to_save:
+    - embed_tokens
+    - lm_head

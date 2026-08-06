@@ -1,0 +1,6 @@
+# Hugging Face model ID or an absolute path to an authorized local copy.
+model_name: "meta-llama/Llama-3.1-8B-Instruct"
+
+# Paths below are resolved relative to this Task1 directory.
+original_dataset_path: "../Molweni-main/MRC(withDiscourse)"
+save_dataset_path: "../Molweni_LLM_dataset"
